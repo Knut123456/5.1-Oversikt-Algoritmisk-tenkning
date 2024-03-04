@@ -1,11 +1,11 @@
-.dyrepark {
-    display: flex;
-}
 
-.bilder {
-    width: 25%;
-}
-
-.bonuser {
+img {
+    width: 500px;
+    justify-content: center;
     
+}
+
+.dyrebilder {
+    justify-content: center;
+    margin-left: 25%;
 }
