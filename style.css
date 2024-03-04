@@ -7,5 +7,32 @@ img {
 
 .dyrebilder {
     justify-content: center;
-    margin-left: 25%;
+    margin-left: 37.5%;
+    width: 100%;
+}
+.oppgradering {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+
+.button1 {
+    background: #6ca3b1; 
+}
+.button1 button {
+    font-size: 10rem;
+}
+
+#matdialog {
+    width: 100%;
 }

@@ -4,21 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="javascript.js"></script>
     <title>Zoo tycon</title>
 </head>
 <body>
-    <div class="bonuser">
-        <dialog id="reklame">
-            
-        </dialog>
-        <button onclick="reklame.showModal()"><img src="/Picture/Innstilliger.webp" class="reklame"></button>
     <div class="form">
         <div class="dyrebilder">
            <img src="bilder/løve.webp" onclick=" bilderdyr() " class="bilder">
            <p>klikk på bilde for å se på de ulike dyrene </p>
         </div>
-        
+        <div class="oppgradering">
+            <button id="oppgrader" >
+                <img src="bilder/oppgrading.webp" onclick=" oppgradering () ">
+                <p>for oppgraderinger click på bilder over</p>
+            </button>
+            <dialog id="matdialog">
+                <button id="lukk" onClick="matdialog.close()">lukk</button>
+                <div class="dyrebilder">
+                    <img src="bilder/løve.webp" onclick=" matedyr() ">
+                    <p id="trenger mat"></p>
+                    <button onclick="gimat()">klikk her for å gi mat</button>
+                 </div>
+             </dialog>
+            <button id="Mat" onclick="matdialog.showModal()">
+                <img src="bilder/Mat.webp" onclick="mat()">
+                <p>for oppgraderinger click på bilder over</p>
+            </button>
+        </div>
+        <div class="stats">
+            <p onclick="infopenger()"></p>
+        </div>
     </div>
+    <script src="javascript.js"></script>
 </body>
 </html>
