@@ -1,35 +1,22 @@
 let mat = 0
 let penger = 0
+let salg = 0
 
 function gimat() {
-    mat = mat + 1
-    penger = penger - 20
-    matmengde()
-}
-
-function inf() {
-    document.getElementById("trengermat").innerHTML = "dyren trenger mat" + mat
-}
-
-function matmengde() {
-    document.getElementById("trengermat").innerHTML = "dyren trenger mat" + mat
+    mat = mat + 1;
+    penger = penger - 20;
 }
 
 
-function bilderdyr() {
-    window.location.href = "dyr.html";
+function oppdatert() {
+    document.getElementById("infopenger").innerHTML = "Penger " + penger  + "kr"
+    document.getElementById("trengermat").innerHTML = "dyren har " + mat +" pizza"
+    
+    setTimeout(oppdatert, 1000)
 }
 
-function oppgradering() {
-    window.location.href = "oppdatering.html";
-}
+oppdatert()
 
-function matlink() {
-    window.location.href = "mat.html";
-}
 
-function skatt() {
-        window.location.href = "skatt.html";
-    }
 
 

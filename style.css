@@ -1,16 +1,18 @@
 
 img {
     width: 500px;
-    justify-content: center;
-    
+    margin: auto;
 }
+    
 
-.dyrebilder {
-    justify-content: center;
-    margin-left: 37.5%;
+
+.form {
+    margin-left: 20%;
+}
+.form button {
     width: 100%;
 }
-.oppgradering {
+.oppgradering-mat {
     display: flex;
     justify-content: center;
 }
@@ -35,4 +37,17 @@ button {
 
 #matdialog {
     width: 100%;
+}
+
+.form-stats {
+    display: flex;
+}
+
+h2 {
+    font-size: 5rem;
+    justify-content: center;
+}
+
+.stats {
+    background-color: aqua;
 }

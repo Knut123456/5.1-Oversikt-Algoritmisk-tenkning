@@ -7,31 +7,74 @@
     <title>Zoo tycon</title>
 </head>
 <body>
-    <div class="form">
-        <div class="dyrebilder">
-           <img src="bilder/løve.webp" onclick=" bilderdyr() " class="bilder">
-           <p>klikk på bilde for å se på de ulike dyrene </p>
-        </div>
-        <div class="oppgradering">
-            <button id="oppgrader" >
-                <img src="bilder/oppgrading.webp" onclick=" oppgradering () ">
-                <p>for oppgraderinger click på bilder over</p>
-            </button>
-            <dialog id="matdialog">
-                <button id="lukk" onClick="matdialog.close()">lukk</button>
-                <div class="dyrebilder">
-                    <img src="bilder/løve.webp" onclick=" matedyr() ">
-                    <p id="trenger mat"></p>
-                    <button onclick="gimat()">klikk her for å gi mat</button>
-                 </div>
-             </dialog>
-            <button id="Mat" onclick="matdialog.showModal()">
-                <img src="bilder/Mat.webp" onclick="mat()">
-                <p>for oppgraderinger click på bilder over</p>
-            </button>
-        </div>
+    <div class="form-stats">
         <div class="stats">
-            <p onclick="infopenger()"></p>
+            <h2>info</h2>
+            <p id="infopenger"></p>
+            <p id="trengermat"></p>
+        </div>
+        <div class="form">
+            <div>
+                <div class="dyrebilder">
+                    <button>
+                        <img src="bilder/løve.webp" onclick=" bilderdyr() " class="bilder">
+                        <p>klikk på bilde for å se på de ulike dyrene </p>
+                    </button>
+                </div>
+                    <div class="oppgradering-mat">
+                        <div>
+                            <button id="Mat" onclick="matdialog.showModal()">
+                                <img src="bilder/Mat.webp" onclick="mat()">
+                                <p>for oppgraderinger click på bilder over</p>
+                            </button>
+                        </div>
+                        <div>
+                            <button id="oppgrader" onclick= "oppgradering.showModal()" >
+                                <img src="bilder/oppgrading.webp">
+                                <p>for oppgraderinger click på bilder over</p>
+                            </button>
+                        </div>
+                </div>
+            </div>
+                <div>
+                        <dialog id="matdialog">
+                            <button id="lukk" onClick="matdialog.close()">lukk</button>
+                            <div class="dyrebilder">
+                                <div>
+                                    <img src="bilder/løve.webp" onclick="bilderdyr()">
+                                    <p id="trengermat"></p>
+                                </div>
+                                <button onclick="gimat()">klikk her for å gi mat</button>
+                            </div>
+                        </dialog>
+
+                        <dialog id="oppgradering">
+                            <button id="lukk" onClick="oppgradering.close()">Lukk</button>
+                            <div class="button1">
+                                <div class="skatt" onclick="skatt()">
+                                    <button aria-label="skatt">
+                                        <p>skatt</p>
+                                    </button>
+                                </div>
+                                <div>
+                                    <button aria-label="bonus">
+                                        <p>bonus</p>
+                                    </button>
+                                </div>
+                                <div>
+                                    <button aria-label="doping av dyr">
+                                        <p>doping av dyr</p>
+                                    </button>
+                                </div>
+                                <div>
+                                    <button aria-label="arbeid">
+                                        <p>arbeid</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </dialog>
+                         </dialog>
+                 </div>   
         </div>
     </div>
     <script src="javascript.js"></script>
