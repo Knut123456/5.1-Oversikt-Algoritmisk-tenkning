@@ -1,16 +1,37 @@
+* {
+    margin:10px;
+    padding: 0;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D4EDDA; /* eller en annen farge basert på dine preferanser */
+    background-image: url(bilder/bakgrunn.webp);
+}
 
 img {
     width: 500px;
     margin: auto;
+    display: block;
+    border: 5px solid #F0F4F8; /* eller en annen farge som matcher nettsidens tema */
+    border-style: inset;
+    max-width: 100%;
+    height: auto;
 }
     
-
+dialog {
+   justify-content: center; 
+   margin-left: 200px;
+}
 
 .form {
-    margin-left: 20%;
+    margin-left: 100px;
 }
+
 .form button {
     width: 100%;
+    height: auto;
 }
 .oppgradering-mat {
     display: flex;
@@ -32,22 +53,35 @@ button {
     background: #6ca3b1; 
 }
 .button1 button {
-    font-size: 10rem;
+    font-size: 10vw;
 }
 
-#matdialog {
-    width: 100%;
-}
 
 .form-stats {
     display: flex;
 }
 
 h2 {
-    font-size: 5rem;
+    font-size: 5vw;
     justify-content: center;
 }
 
 .stats {
-    background-color: aqua;
+    background-color: rgb(165, 198, 20);
+    display: flex;
+    flex-direction: column;
 }
+
+.vis {
+    font-size: 2vw;
+    display: block;
+    border: 1px solid black;
+    background-color: #6ca3b1;
+}
+
+.bonusdiv {
+    display: flex;
+}
+
+
+  

@@ -10,69 +10,93 @@
     <div class="form-stats">
         <div class="stats">
             <h2>info</h2>
-            <p id="infopenger"></p>
-            <p id="trengermat"></p>
+            <button>
+                <p id="infopenger"></p>
+            </button>
+            <button>
+                <p id="trengermat"></p>
+            </button>
+            <button  >
+                <p id="populæritet"></p>
+            </button>
+            <button onclick="document.getElementById('skat').showModal()" >
+                <p id="skattinfo"></p>
+            </button>
         </div>
         <div class="form">
             <div>
                 <div class="dyrebilder">
-                    <button>
-                        <img src="bilder/løve.webp" onclick=" bilderdyr() " class="bilder">
-                        <p>klikk på bilde for å se på de ulike dyrene </p>
+                    <button onclick="dyr.showModal()">
+                        <img src="bilder/dyr.webp">
+                        <p class="vis">klikk på bilde for å se på de ulike dyrene </p>
                     </button>
                 </div>
                     <div class="oppgradering-mat">
                         <div>
                             <button id="Mat" onclick="matdialog.showModal()">
                                 <img src="bilder/Mat.webp" onclick="mat()">
-                                <p>for oppgraderinger click på bilder over</p>
+                                <p class="vis">for oppgraderinger click på bilder over</p>
                             </button>
                         </div>
+                        
                         <div>
                             <button id="oppgrader" onclick= "oppgradering.showModal()" >
-                                <img src="bilder/oppgrading.webp">
-                                <p>for oppgraderinger click på bilder over</p>
+                                <img src="bilder/oppgrading.webp"> <!-- alle bildene er laget av ai med dalle ai -->
+                                <p class="vis">for oppgraderinger click på bilder over</p>
                             </button>
                         </div>
                 </div>
-            </div>
+        </div>
                 <div>
                         <dialog id="matdialog">
-                            <button id="lukk" onClick="matdialog.close()">lukk</button>
+                            <button class="vis" id="lukk" onClick="matdialog.close()">lukk</button>
                             <div class="dyrebilder">
                                 <div>
-                                    <img src="bilder/løve.webp" onclick="bilderdyr()">
-                                    <p id="trengermat"></p>
+                                    <button>
+                                        <img src="bilder/hunger.webp" alt="">
+                                        <p id="trengermat"></p>
+                                    </button>
                                 </div>
-                                <button onclick="gimat()">klikk her for å gi mat</button>
+                                <button class="vis" onclick="gimat()">klikk her for å gi mat</button>
                             </div>
                         </dialog>
 
                         <dialog id="oppgradering">
-                            <button id="lukk" onClick="oppgradering.close()">Lukk</button>
+                            <button class="vis" id="lukk" onClick="oppgradering.close()">Lukk</button>
                             <div class="button1">
-                                <div class="skatt" onclick="skatt()">
-                                    <button aria-label="skatt">
-                                        <p>skatt</p>
-                                    </button>
-                                </div>
                                 <div>
-                                    <button aria-label="bonus">
+                                    <button class="bonus">
                                         <p>bonus</p>
                                     </button>
                                 </div>
                                 <div>
-                                    <button aria-label="doping av dyr">
+                                    <button class="doping av dyr">
                                         <p>doping av dyr</p>
                                     </button>
                                 </div>
                                 <div>
-                                    <button aria-label="arbeid">
-                                        <p>arbeid</p>
+                                    <button class="arbeid">
+                                      <p>arbeid</p> 
                                     </button>
                                 </div>
                             </div>
                         </dialog>
+                        <dialog id="dyr">
+                            <button id="lukk" onClick="dyr.close()">Lukk</button>
+                            <button onclick ="selgebilleter()">
+                                <img src="bilder/ticket to sell.webp" alt="">
+                                <p class="vis">click for å selge billeter</p>
+                            </button>
+                         </dialog>
+                         <dialog id="skat">
+                            <button id="lukk" onClick="skat.close()">Lukk</button>
+
+                         </dialog>
+                         <dialog id="bonus">
+                            <button id="lukk" onClick="bonus.close()">Lukk</button>
+                            <div class="bonusdiv">
+
+                            </div>
                          </dialog>
                  </div>   
         </div>
